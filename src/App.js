@@ -957,23 +957,25 @@ const App = () => {
 
         <main className="content">{renderContent()}</main>
 
-        <div className="bottom-nav">
-          {menuItems.map(({ id, label, icon }) => (
-            <button
-              key={id}
-              type="button"
-              onClick={() => handleTabChange(id)}
-              className={`nav-item ${activeTab === id ? "active" : ""}`}
-            >
-              <div className="active-box">
-                <span className="icon" aria-hidden>
-                  {icon}
-                </span>
-                <span className="label">{label}</span>
-              </div>
-            </button>
-          ))}
-        </div>
+        {activeTab !== "home" && (
+          <div className="bottom-nav">
+            {menuItems.map(({ id, label, icon }) => (
+              <button
+                key={id}
+                type="button"
+                onClick={() => handleTabChange(id)}
+                className={`nav-item ${activeTab === id ? "active" : ""}`}
+              >
+                <div className="active-box">
+                  <span className="icon" aria-hidden>
+                    {icon}
+                  </span>
+                  <span className="label">{label}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
