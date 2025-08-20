@@ -402,43 +402,8 @@ const App = () => {
               disabled={!isFormValid()}
             >
               <Search size={20} />
-              {!isFormValid() ? "모든 정보를 입력해주세요" : "진단 시작하기"}
+              {!isFormValid() ? "진단 시작하기" : "진단 시작하기"}
             </button>
-
-            <div
-              className="benefits-section"
-              style={{
-                marginTop: "1rem",
-                backgroundColor: "#fef3c7",
-                border: "1px solid #fbbf24",
-                padding: "1rem",
-              }}
-            >
-              <div
-                className="benefits-header"
-                style={{ marginBottom: "0.5rem" }}
-              >
-                <span style={{ fontSize: "1.25rem" }}>⚠️</span>
-                <h3
-                  style={{
-                    fontSize: "0.875rem",
-                    color: "#92400e",
-                    margin: 0,
-                  }}
-                >
-                  입력 안내
-                </h3>
-              </div>
-              <div
-                style={{
-                  fontSize: "0.75rem",
-                  color: "#92400e",
-                  lineHeight: "1.4",
-                }}
-              >
-                정확한 복지 혜택 진단을 위해 모든 정보를 정확히 입력해주세요.
-              </div>
-            </div>
           </div>
         </div>
       </div>
