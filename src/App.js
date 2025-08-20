@@ -241,7 +241,7 @@ const App = () => {
       const errors = [];
 
       if (!formData.age || formData.age.trim() === "") {
-        errors.push("나이를 입력해주세요");
+        errors.push("만나이를 입력해주세요");
       } else if (
         isNaN(formData.age) ||
         parseInt(formData.age) < 0 ||
@@ -311,7 +311,7 @@ const App = () => {
               </div>
               <input
                 type="text"
-                placeholder="나이를 입력하세요"
+                placeholder="만나이를 입력하세요"
                 value={formData.age}
                 onChange={(e) => handleInputChange("age", e.target.value)}
                 className="form-input"
@@ -895,8 +895,7 @@ const App = () => {
           <div className="header-content">
             {activeTab === "home" && (
               <>
-                <span className="header-icon">🏛️</span>
-                <h1>대한민국 복지 진단</h1>
+                <h1>복지콕 : 대한민국 복지 진단</h1>
               </>
             )}
             {activeTab === "check" && (
